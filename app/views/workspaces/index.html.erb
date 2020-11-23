@@ -1,0 +1,7 @@
+<h1>Workspaces</h1>
+
+<% @workspaces.each do |workspace| %>
+  <ul>
+    <li><%= link_to workspace.name, workspace_path(workspace) %> || <%= workspace.description %></li>
+  </ul>   
+<% end %>
