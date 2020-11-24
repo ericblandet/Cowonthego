@@ -1,7 +1,6 @@
 <div class ="grid-show">
   <div class="grid-left">
     <h2>Discover... <span><%= @workspace.name %></span></h2>
-
     <div class="workspace-card">
       <ul>
         <li><i class="fas fa-map-pin workspace-icon"></i><%= @workspace.address %></li>
@@ -12,6 +11,6 @@
     </div>
   </div>
   <div class="grid-right">
-    <img src="https://i.pinimg.com/originals/9a/58/cb/9a58cbcc189591ab69c6df315aa45274.jpg" alt="map" class="workspace-image">
+    <%= image_tag "map.png", alt: "map", class:"workspace-image"%>
   </div>
 </div>

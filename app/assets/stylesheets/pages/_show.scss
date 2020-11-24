@@ -5,8 +5,10 @@
 }
 
 .grid-left {
+  background-image: url("https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1661&q=80");
   h2 {
-    margin-top: 2rem;
+    color:white;
+    margin-top: 4rem;
     margin-bottom: 1rem;
     text-align: center;
     font-weight: 300;
@@ -21,21 +23,23 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    color: white;
   }
 
   li {
     font-size: 20px;
   }
 }
+
 .workspace-card {
   margin: 0 auto;
-  background: white;
+  background: rgba($black, .4);
   border-radius: 25px;
   width: 70%;
   padding: 1rem;
-  box-shadow: 5px 5px 5px rgba($black, .2);
-
+  box-shadow: 10px 10px 10px rgba($black, .2);
 }
+
 .description {
   font-size: 14px!important;  
   text-align: justify;
