@@ -1,0 +1,73 @@
+// space
+    $spacing-s: 8px;
+    $spacing-m: 16px;
+    $spacing-l: 24px;
+    $spacing-xl: 32px;
+    $spacing-xxl: 64px;
+    $width-container: 1200px;
+
+.section {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: $spacing-xl;
+    row-gap: $spacing-xl;
+    padding: $spacing-xl;
+  }
+
+  .card {
+    list-style: none;
+    position: relative;
+    background: transparent;
+    border: none;
+    max-height: 400px;
+  }
+
+  .card:before {
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+  }
+  
+  .card_background {
+    background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transition: 
+      filter 200ms linear,
+      transform 200ms linear;
+  }
+  
+  .card:hover .card_background {
+    transform: scale(1.05) translateZ(0);
+  }
+  
+  .card_content {
+    left: 0;
+    padding: $spacing-l;
+    position: absolute;
+    top: 0;
+  }
+  
+  .card_category {
+    color: $light-beige;
+    font-size: 20px;
+    margin-bottom: $spacing-s;
+    text-transform: uppercase;
+  }
+  
+  .card_heading {
+    color: $yellow;
+    font-size: 32px;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+  }
