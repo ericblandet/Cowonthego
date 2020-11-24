@@ -18,6 +18,18 @@ office_images = ["https://images.unsplash.com/photo-1522071820081-009f0129c71c?i
 "https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"]
 
 
+## Booking depends on workspace
+## Workspace depends on User
+## User single
+
+## ORDER IMPORTANT 
+puts"destroying db"
+Booking.destroy_all
+Workspace.destroy_all
+User.destroy_all
+
+puts"clean bro"
+
 10.times do
   puts "create user"
   user = User.create(
@@ -40,6 +52,7 @@ office_images = ["https://images.unsplash.com/photo-1522071820081-009f0129c71c?i
     user_id: user.id,
   )
   puts "adding pictures"
+
   file = URI.open(office_images[rand(1..10)])
   workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
