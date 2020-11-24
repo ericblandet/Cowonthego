@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <h1>Create a booking</h1>
+      <%= simple_form_for @booking do |f| %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+        <%= f.input :total_price %>
+        <%= f.button :submit, "Book", class: "btn btn-primary btn-sm" %>
+      <% end %>
+      <p>
+        <%= link_to 'Back to bookings', bookings_path %>
+      </p>
+    </div>
+  </div>
+</div>
