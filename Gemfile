@@ -33,6 +33,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'faker'
+# To keep some things secret (api credentials)
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   gem 'pry-byebug'
