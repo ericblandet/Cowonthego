@@ -5,5 +5,5 @@ class Workspace < ApplicationRecord
   validates :capacity, numericality: { only_integer: true }
 
   has_many :bookings
-  has_many_attached :photos
+  has_one_attached :photo
 end

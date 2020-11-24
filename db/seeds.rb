@@ -41,7 +41,7 @@ office_images = ["https://images.unsplash.com/photo-1522071820081-009f0129c71c?i
   )
   puts "adding pictures"
   file = URI.open(office_images[rand(1..10)])
-  workspace.photos.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+  workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
   puts "create booking"
   booking = Booking.create(
