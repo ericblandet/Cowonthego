@@ -8,6 +8,7 @@
         <%= f.input :address, placeholder: '25 street Renens' %>
         <%= f.input :capacity %>
         <%= f.input :daily_rate, placeholder: '$14.50' %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.button :submit, "Upload", class: "btn btn-primary btn-sm" %>
       <% end %>
       <p>
