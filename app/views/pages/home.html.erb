@@ -1,3 +1,4 @@
+
 <div id="booking" class="section">
 <div class="section-center">
    <div class="container">
@@ -52,7 +53,8 @@
                         </div>
                      </div>
                      <div class="form-btn col-sm-12">
-                        <button class="submit-btn">Check availability</button>
+                        <%# <button class="submit-btn">Check availability</button> %>
+                        <%= link_to 'Check availability', workspaces_path, class:"btn btn-success" %>
                      </div>
                </form>
                </div>
