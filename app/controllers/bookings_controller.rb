@@ -9,17 +9,17 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @workspace = Workspace.find(params[:workspace_id])
     @booking = Booking.new
-    @booking.user = current_user
   end
 
   def create
     @booking = current_user.bookings.build(booking_params)
-    @workspace = Workspace.find(params[workspace_id])
-    @booking.save
+    @workspace = Workspace.find(params[:workspace_id])
+    @booking.workspace = @workspace
 
     if @booking.save
-      redirect_to @booking
+      redirect_to bookings_path
     else
       render 'new'
     end
