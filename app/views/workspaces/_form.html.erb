@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <h1>Create a workspace</h1>
+      <%= simple_form_for @workspace do |f| %>
+        <%= f.input :name, placeholder: 'IdeaFactory' %>
+        <%= f.input :description, placeholder: 'A quiet space for the concentrated mind' %>
+        <%= f.input :address, placeholder: '25 street Renens' %>
+        <%= f.input :capacity %>
+        <%= f.input :daily_rate, placeholder: '$14.50' %>
+        <%= f.button :submit, "Upload", class: "btn btn-primary btn-sm" %>
+      <% end %>
+      <p>
+        <%= link_to 'Back', workspaces_path %>
+      </p>
+
+    </div>
+  </div>
+</div>
+
