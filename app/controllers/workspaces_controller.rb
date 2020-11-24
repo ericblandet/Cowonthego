@@ -28,6 +28,6 @@ class WorkspacesController < ApplicationController
   end
 
   def workspace_params
-    params.require(:workspace).permit(:name, :description, :address, :capacity, :daily_route, :photos)
+    params.require(:workspace).permit(:name, :description, :address, :capacity, :daily_route, :photo)
   end
 end
