@@ -4,6 +4,6 @@ class Workspace < ApplicationRecord
   validates :daily_rate, numericality: { greater_than: 0 }
   validates :capacity, numericality: { only_integer: true }
 
-  has_many :bookings, dependent: :delete_all
+  has_many :bookings, dependent: :destroy
   has_many_attached :photos
 end
