@@ -12,10 +12,19 @@
 @import "components/index";
 @import "pages/index";
 
+@import "utilities";
+
 
 body {
   background-image: url("../assets/images/homepage-coworking.jpg");
   background-color: white;
   color: $gray;
   position: relative;
+  height:100vh;
+  padding-bottom:5rem;
+}
+
+::selection {
+  color: $green;
+  background-color:rgba($black,.3);
 }
