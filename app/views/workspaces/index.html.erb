@@ -1,11 +1,14 @@
 <h1>Workspaces</h1>
-<ul>
+<section class="section">
 <% @workspaces.each do |workspace| %>
-    <li><%= link_to workspace.name, workspace_path(workspace) %> || <%= workspace.description %></li>
-    <li>
-      <% if workspace.photo.attached? %> 
-        <%= cl_image_tag workspace.photo.key, height: 300, width: 400, crop: :fill %>
-      <% end %>
-    </li> 
+<div class="card-grid">
+    <a class="card" href="#">
+      <div class="card_background"></div>
+      <div class="card_content">
+        <p class="card_category"><%= workspace.address %></p>
+        <h3 class="card_heading"><%= workspace.name %></h3>
+      </div>
+    </a>
+  </div>
 <% end %>
-</ul>
+</section>
