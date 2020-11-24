@@ -28,7 +28,7 @@
     display: block;
     padding-bottom: 150%;
   }
-  
+
   .card_background {
     background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
     background-size: cover;
@@ -41,29 +41,29 @@
     right: 0;
     top: 0;
     transform-origin: center;
-    transition: 
+    transition:
       filter 200ms linear,
       transform 200ms linear;
   }
-  
+
   .card:hover .card_background {
     transform: scale(1.05) translateZ(0);
   }
-  
+
   .card_content {
     left: 0;
     padding: $spacing-l;
     position: absolute;
     top: 0;
   }
-  
+
   .card_category {
     color: $light-beige;
     font-size: 20px;
     margin-bottom: $spacing-s;
     text-transform: uppercase;
   }
-  
+
   .card_heading {
     color: $yellow;
     font-size: 32px;
