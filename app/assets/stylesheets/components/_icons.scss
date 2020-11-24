@@ -1,10 +1,12 @@
 .fa-fire {
-  color: #D23333;
+  color: $green;
+  padding-left: 2rem;
 }
 
 .workspace-icon {
-  color: #D23333;
+  color: $green;
   font-size: 24px;
   padding: 1.4rem;
   width:5rem;
+  text-shadow: 2px 2px 2px rgba($black, .5);
 }

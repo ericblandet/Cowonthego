@@ -12,8 +12,10 @@
           <li><%= cl_image_tag @workspace.photo.key, height: 300, width: 400, crop: :fill %></li>
         <% end %>
     </div>
+    <%= link_to "Back", workspaces_path, class:"btn btn-home" %>
   </div>
   <div class="grid-right">
     <%= image_tag "map.png", alt: "map", class:"workspace-image" %>
   </div>
 </div>
+
