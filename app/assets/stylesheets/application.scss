@@ -14,5 +14,8 @@
 
 
 body {
-background-image: url("../assets/images/homepage-coworking.jpg");
+  background-image: url("../assets/images/homepage-coworking.jpg");
+  background-color: white;
+  color: $dark-grey-1;
+  position: relative;
 }
