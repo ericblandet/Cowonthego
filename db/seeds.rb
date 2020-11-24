@@ -52,8 +52,9 @@ puts"clean bro"
     user_id: user.id,
   )
   puts "adding pictures"
-  file = URI.open(office_images.sample)
-  workspace.photos.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+
+  file = URI.open(office_images[rand(1..10)])
+  workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
   puts "create booking"
   booking = Booking.create(

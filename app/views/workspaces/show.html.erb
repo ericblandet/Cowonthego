@@ -1,16 +1,21 @@
 <div class ="grid-show">
   <div class="grid-left">
     <h2>Discover... <span><%= @workspace.name %></span></h2>
-    <div class="workspace-card">
+    <div class="workspace-card d-flex">
       <ul>
         <li><i class="fas fa-map-pin workspace-icon"></i><%= @workspace.address %></li>
         <li><i class="fas fa-users workspace-icon"></i><%= @workspace.capacity %> Max </li>
         <li><i class="fab fa-bitcoin workspace-icon"></i><%= @workspace.daily_rate %>$ / Day</li>
         <li class="description"><i class="fas fa-star workspace-icon"></i><%= @workspace.description %></li>
       </ul>
+        <% if @workspace.photo.attached? %>
+          <li><%= cl_image_tag @workspace.photo.key, height: 300, width: 400, crop: :fill %></li>
+        <% end %>
     </div>
+    <%= link_to "Back", workspaces_path, class:"btn btn-home" %>
   </div>
   <div class="grid-right">
-    <%= image_tag "map.png", alt: "map", class:"workspace-image"%>
+    <%= image_tag "map.png", alt: "map", class:"workspace-image" %>
   </div>
 </div>
+

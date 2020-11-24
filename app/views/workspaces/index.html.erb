@@ -1,7 +1,11 @@
 <h1>Workspaces</h1>
-
+<ul>
 <% @workspaces.each do |workspace| %>
-  <ul>
     <li><%= link_to workspace.name, workspace_path(workspace) %> || <%= workspace.description %></li>
-  </ul>   
+    <li>
+      <% if workspace.photo.attached? %> 
+        <%= cl_image_tag workspace.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+    </li> 
 <% end %>
+</ul>
