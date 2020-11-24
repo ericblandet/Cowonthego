@@ -2,7 +2,7 @@
 <section class="section">
 <% @workspaces.each do |workspace| %>
 <div class="card-grid">
-    <a class="card" href="#">
+    <a class="card" href=<%= workspace_path(workspace)%>>
       <div class="card_background"></div>
       <div class="card_content">
         <p class="card_category"><%= workspace.address %></p>

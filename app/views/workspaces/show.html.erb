@@ -1,18 +1,31 @@
 <div class ="grid-show">
   <div class="grid-left">
-    <h2>Discover... <span><%= @workspace.name %></span></h2>
-    <div class="workspace-card d-flex">
-      <ul>
-        <li><i class="fas fa-map-pin workspace-icon"></i><%= @workspace.address %></li>
-        <li><i class="fas fa-users workspace-icon"></i><%= @workspace.capacity %> Max </li>
-        <li><i class="fab fa-bitcoin workspace-icon"></i><%= @workspace.daily_rate %>$ / Day</li>
-        <li class="description"><i class="fas fa-star workspace-icon"></i><%= @workspace.description %></li>
-      </ul>
-        <% if @workspace.photo.attached? %>
-          <li><%= cl_image_tag @workspace.photo.key, height: 300, width: 400, crop: :fill %></li>
-        <% end %>
+    <div class="heading-show">
+      
+      <%= link_to "Back", workspaces_path, class:"btn btn-home" %>
+      <h2>Discover... <span><%= @workspace.name %></span></h2>
     </div>
-    <%= link_to "Back", workspaces_path, class:"btn btn-home" %>
+    <div class="workspace-card">
+      <div class="top">
+        <div class="card-photo">
+          <% if @workspace.photo.attached? %>
+          <%= cl_image_tag @workspace.photo.key, class:'image_workspace' %>
+          <% end %>
+        </div>
+        <div class="card-details">
+          <ul>
+            <li><i class="fas fa-map-pin workspace-icon"></i><%= @workspace.address %></li>
+            <li><i class="fas fa-users workspace-icon"></i><%= @workspace.capacity %> Max </li>
+            <li><i class="fab fa-bitcoin workspace-icon"></i><%= @workspace.daily_rate %>$ / Day</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p class="description"><i class="fas fa-star workspace-icon"></i><%= @workspace.description %></p>
+      </div>
+    </div>
+
+
   </div>
   <div class="grid-right">
     <%= image_tag "map.png", alt: "map", class:"workspace-image" %>
