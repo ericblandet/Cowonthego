@@ -20,7 +20,9 @@ end
   puts "create workspace"
   workspace = Workspace.create(
     name: Faker::Commerce.material,
-    description: "coworking space",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis iaculis ligula, non facilisis felis imperdiet vitae. Nullam volutpat tellus id tortor venenatis dapibus vitae et enim. Ut sagittis laoreet lorem sit amet cursus.  Cras sed vulputate ligula, et tempus ex. Curabitur eu velit dolor. Suspendisse pharetra libero eu justo pharetra consequat. Sed faucibus libero elit, non tincidunt ligula maximus eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+    Integer lobortis facilisis erat, non tincidunt felis tempus sed. Curabitur quam tellus, dictum non nisl accumsan, malesuada malesuada nisi. Vivamus sit amet diam porta, faucibus.",
     address: Faker::Address.state,
     capacity: rand(5..20),
     daily_rate: rand(50..100),
