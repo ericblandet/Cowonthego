@@ -12,10 +12,9 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render './components/navbar' %>
+    <%= render './shared/navbar' %>
+    <%= render 'shared/flashes' %>
     <%= yield %>
-    <%= render './components/footer' %>
+    <%= render './shared/footer' %>
   </body>
 </html>
