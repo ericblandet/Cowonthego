@@ -14,6 +14,7 @@ class WorkspacesController < ApplicationController
 
   def create
     @workspace = Workspace.new(workspace_params)
+    @workspace.user = current_user
     if @workspace.save
       redirect_to workspaces_path
     else
