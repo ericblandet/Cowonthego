@@ -1,0 +1,15 @@
+<div class="container mt-32">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <h1>Create a booking</h1>
+      <%= simple_form_for [@workspace, @booking] do |f| %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+        <%= f.button :submit, "Book", class: "btn btn-primary btn-sm" %>
+      <% end %>
+      <p>
+        <%= link_to 'Back to bookings', workspace_bookings_path %>
+      </p>
+    </div>
+  </div>
+</div>

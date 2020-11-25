@@ -33,6 +33,14 @@ body {
   padding-bottom:5rem;
 }
 
+p {
+  font-family: $body-font;
+}
+
+h1, h2, h3 {
+  font-family: $title-font;
+}
+
 ::selection {
   color: $primary-color;
   background-color:rgba($black,.3);

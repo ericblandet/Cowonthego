@@ -12,21 +12,14 @@
 	transform: translateY(-50%);
 }
 
-#booking {
-	background-image: url("https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+.background {
+	background-image: url("https://images.unsplash.com/photo-1600508774634-4e11d34730e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
 	object-fit: cover;
 	background-size: cover;
 	background-position: center;
 }
 
-#booking::before {
-	content: '';
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0;
-}
+
 
 .booking-form {
 	background-color: #fff;
@@ -48,7 +41,7 @@
 	height: 40px;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #3e485c;
+	color: $gray;
 	font-size: 14px;
 }
 
@@ -96,7 +89,7 @@
 
 .booking-form .form-label {
 	display: inline-block;
-	color: #5e636d;
+	color: $primary-color;
 	font-weight: 700;
 	margin-bottom: 6px;
 	margin-left: 7px;
@@ -105,7 +98,7 @@
 .booking-form .submit-btn {
 	display: inline-block;
 	color: #fff;
-	background-color: $green;
+	background-color: $primary-color;
 	font-weight: 700;
 	padding: 14px 30px;
 	border-radius: 4px;
@@ -117,6 +110,7 @@
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
 	opacity: 0.9;
+	transform: scale(1.05) translateZ(0);
 }
 
 .booking-cta {
