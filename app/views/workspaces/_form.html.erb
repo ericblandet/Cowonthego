@@ -1,4 +1,7 @@
 <div class="container mg-tp-md">
+  <div class="div_workspace_btn">
+    <%= link_to 'back', workspaces_path, class:"btn btn-home"%>
+  </div>
   <div class="row justify-content-center">
     <div class="col-lg-6">
       <%= simple_form_for @workspace do |f| %>
@@ -8,11 +11,8 @@
         <%= f.input :capacity %>
         <%= f.input :daily_rate, placeholder: '$14.50' %>
         <%= f.input :photo, as: :file %>
-        <%= f.button :submit, "Create", class: "btn btn-primary btn-sm" %>
+        <%= f.button :submit, "Create", class: "btn btn-home" %>
       <% end %>
     </div>
-  </div>
-  <div class="div_workspace_btn">
-    <%= link_to 'Back', workspaces_path, class:"btn btn-home"%>
   </div>
 </div>
