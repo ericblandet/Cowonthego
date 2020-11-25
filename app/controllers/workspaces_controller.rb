@@ -3,9 +3,23 @@ class WorkspacesController < ApplicationController
 
   def index
     @workspaces = Workspace.all
+    @markers = @workspaces.geocoded.map do |workspace|
+      {
+        lat: workspace.latitude,
+        lng: workspace.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { workspace: workspace }),
+        image_url: helpers.asset_url('https://www.flaticon.com/svg/static/icons/svg/1297/1297048.svg')
+      }
+    end
   end
 
   def show
+    @markers =[{
+        lat: @workspace.latitude,
+        lng: @workspace.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { workspace: @workspace }),
+        image_url: helpers.asset_url('https://www.flaticon.com/svg/static/icons/svg/1297/1297048.svg')
+      }]
   end
 
   def new

@@ -25,12 +25,17 @@
       <div class="bottom">
         <p class="description"><i class="fas fa-star workspace-icon"></i><%= @workspace.description %></p>
       </div>
+      <%= link_to "Book", new_workspace_booking_path(@workspace), class:"btn btn-home" %>
     </div>
 
 
   </div>
   <div class="grid-right">
-    <%= image_tag "map.png", alt: "map", class:"workspace-image" %>
+    <div id="map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>" class="workspace-image" >
+    </div>
   </div>
 </div>
 
+    
