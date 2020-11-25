@@ -6,7 +6,7 @@
       <a class="card" href= <%=workspace_path(workspace)%> >
         <% if workspace.photo.attached? %>
           <div class="card_background_active" style="background-image: url('<%= cl_image_path workspace.photo.key, height: 300, width: 400, crop: :fill%>')">
-          </div> 
+          </div>
           <% else %>
             <div class="card_background"></div>
           <% end %>

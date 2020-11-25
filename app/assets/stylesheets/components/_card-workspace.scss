@@ -29,6 +29,13 @@
     padding-bottom: 150%;
   }
 
+  .card:hover {
+      transform: scale(1.05) translateZ(0);
+      transition:
+      filter 200ms linear,
+      transform 200ms linear;
+  }
+
   .card_background {
     background-image: url("../../images/workstation.png"); // ! to be proved
     background-size: cover;
@@ -41,9 +48,6 @@
     right: 0;
     top: 0;
     transform-origin: center;
-    transition:
-      filter 200ms linear,
-      transform 200ms linear;
   }
 
   .card_background_active {
@@ -57,13 +61,6 @@
     right: 0;
     top: 0;
     transform-origin: center;
-    transition:
-      filter 200ms linear,
-      transform 200ms linear;
-  }
-
-  .card:hover .card_background {
-    transform: scale(1.05) translateZ(0);
   }
 
   .card_content {
