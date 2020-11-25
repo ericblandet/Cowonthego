@@ -180,32 +180,32 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 
 puts "creating Simon"
 User.create!(
-  email: "simon@lewagon.com",
-  password: "123456",
-  username: "simon",
-  first_name: "Simon",
-  last_name: "Buschs",
-  role: "user"
+              email: "simon@lewagon.com",
+              password: "123456",
+              username: "simon",
+              first_name: "Simon",
+              last_name: "Buschs",
+              role: "user"
 )
 
 puts "creating Ben"
 User.create!(
-  email: "ben@lewagon.com",
-  password: "123456",
-  username: "ben",
-  first_name: "Ben",
-  last_name: "Atieku",
-  role: "user"
+              email: "ben@lewagon.com",
+              password: "123456",
+              username: "ben",
+              first_name: "Ben",
+              last_name: "Atieku",
+              role: "user"
 )
 
 puts "creating Tenz"
 User.create!(
-  email: "tenzin@lewagon.com",
-  password: "123456",
-  username: "tenz",
-  first_name: "Tenzin",
-  last_name: "Gasser",
-  role: "user"
+              email: "tenzin@lewagon.com",
+              password: "123456",
+              username: "tenz",
+              first_name: "Tenzin",
+              last_name: "Gasser",
+              role: "user"
 )
 
 puts "creating 5 random users"
