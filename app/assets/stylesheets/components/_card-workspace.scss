@@ -5,7 +5,9 @@
     $spacing-xl: 32px;
     $spacing-xxl: 64px;
     $width-container: 1200px;
-
+h1 {
+  color: black;
+}
 .section {
     align-items: center;
     display: grid;
@@ -40,7 +42,7 @@
     background-image: url("../../images/workstation.png"); // ! to be proved
     background-size: cover;
     background-position: center;
-    border-radius: 24px;
+    border-radius: 10px;
     bottom: 0;
     filter: brightness(0.75) saturate(1.2) contrast(0.85);
     left: 0;
@@ -48,12 +50,13 @@
     right: 0;
     top: 0;
     transform-origin: center;
+    box-shadow: 2px 2px 2px rgba(black, .4);
   }
 
   .card_background_active {
     background-size: cover;
     background-position: center;
-    border-radius: 24px;
+    border-radius: 10px;
     bottom: 0;
     filter: brightness(0.75) saturate(1.2) contrast(0.85);
     left: 0;
@@ -61,26 +64,45 @@
     right: 0;
     top: 0;
     transform-origin: center;
+    box-shadow: 2px 2px 2px rgba(black, .4);
   }
 
   .card_content {
     left: 0;
-    padding: $spacing-l;
+    // padding: $spacing-l;
+    padding: 10px;
     position: absolute;
     top: 0;
   }
 
   .card_category {
     color: $light-beige;
-    font-size: 20px;
+    font-size: 12px;
     margin-bottom: $spacing-s;
     text-transform: uppercase;
   }
 
   .card_heading {
+    text-decoration: underline white;
     color: $yellow;
-    font-size: 32px;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    font-size: 20px;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.6);
     line-height: 1.4;
-    word-spacing: 100vw;
   }
+
+
+.grid-index {
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  position:relative;
+}
+
+.grid-index-left {
+  height: 100vh;
+}
+
+#map {
+  position:fixed;
+  margin-bottom:4rem;
+}
