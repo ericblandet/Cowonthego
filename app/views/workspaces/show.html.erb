@@ -3,7 +3,7 @@
     <div class="heading-show">
 
       <%= link_to "Back", workspaces_path, class:"btn btn-home" %>
-      <h2>Discover... <span><%= @workspace.name %></span></h2>
+      <h2>Discover... </h2>
     </div>
     <div class="workspace-card">
       <div class="top">
@@ -13,10 +13,11 @@
           <% end %>
         </div>
         <div class="card-details">
-          <ul>
+        <p class="workspace_name u-center-text"><%= @workspace.name %></p>
+          <ul class="flexyflex">
             <li><i class="fas fa-map-pin workspace-icon"></i><%= @workspace.address %></li>
             <li><i class="fas fa-users workspace-icon"></i><%= @workspace.capacity %> Max </li>
-            <li><i class="fab fa-bitcoin workspace-icon"></i><%= @workspace.daily_rate %>$ / Day</li>
+            <li><i class="fab fa-bitcoin workspace-icon mg-btm-v-sm"></i><%= @workspace.daily_rate %>$ / Day</li>
             <li class="u-center-text">
               <%= link_to "Edit Workspace", edit_workspace_path(@workspace), class:"btn btn-home btn-center mg-right-md"  %>
               <%= link_to "Delete", workspace_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-home btn-center"  %>
@@ -27,7 +28,9 @@
       <div class="bottom">
         <p class="description"><i class="fas fa-star workspace-icon"></i><%= @workspace.description %></p>
       </div>
-      <%= link_to "Book", new_workspace_booking_path(@workspace), class:"btn btn-home btn-center" %>
+      <div class="btn-center">
+        <%= link_to "Book", new_workspace_booking_path(@workspace), class:"btn btn-home btn-booking" %>
+      </div>
     </div>
   </div>
   <div class="grid-right">
