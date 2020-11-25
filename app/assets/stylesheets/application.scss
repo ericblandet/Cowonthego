@@ -14,6 +14,13 @@
 
 @import "utilities";
 
+*,
+*::before,
+*::after  {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
 
 body {
   background-image: url("../assets/images/homepage-coworking.jpg");
