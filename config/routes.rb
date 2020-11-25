@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :workspaces do
     resources :bookings, only:[:new, :create]
   end
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:index, :destroy]
   root to: 'pages#home'
 end
