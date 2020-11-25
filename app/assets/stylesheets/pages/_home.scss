@@ -13,7 +13,8 @@
 }
 
 .background {
-	background-image: url(homepage-coworking.jpg);
+	background-image: url("https://images.unsplash.com/photo-1600508774634-4e11d34730e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");		background-image: url(homepage-coworking.jpg);
+	object-fit: cover;
 	background-size: cover;
 	background-position: center;
 }
