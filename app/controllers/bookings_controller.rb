@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.build(booking_params)
     @workspace = Workspace.find(params[:workspace_id])
     @booking.workspace = @workspace
+    @booking.total_price = (@booking.end_date - @booking.start_date) * @workspace.daily_rate
 
     if @booking.save
       redirect_to bookings_path
@@ -38,7 +39,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to workspaces_path
+    redirect_to bookings_path
   end
 
   private
