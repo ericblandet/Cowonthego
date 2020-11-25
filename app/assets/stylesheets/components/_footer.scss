@@ -32,3 +32,13 @@
 .footer-links a:hover {
   opacity: 1;
 }
+
+.team-link {
+  color: $primary-color;
+  text-decoration: none;
+  
+  &:hover {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
