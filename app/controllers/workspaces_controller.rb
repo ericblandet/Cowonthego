@@ -1,5 +1,5 @@
 class WorkspacesController < ApplicationController
-  before_action :set_workspace, only: [:show, :edit, :update]
+  before_action :set_workspace, only: [:show, :edit, :update, :destroy]
 
   def index
     @workspaces = Workspace.all
@@ -27,9 +27,15 @@ class WorkspacesController < ApplicationController
 
   def update
     if @workspace.update(workspace_params)
-      redirect_to @workspace
+      redirect_to workspace_path
     else
-      render  'edit'
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @workspace.destroy
+    redirect_to workspaces_path
   end
 
   private
