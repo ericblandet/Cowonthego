@@ -1,6 +1,7 @@
-<h2 class="mg-top-lg u-center-text">Log in</h2>
+<div class="container">
+  <%= link_to "<<<", root_path, class:"btn btn-home mg-top-md" %>
+  <h2 class="u-center-text">Log in</h2>
 
-<div class="container mg-tp-md">
   <div class="row-new">
     <div class="col-lg-4">
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -15,11 +16,13 @@
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
           <div class="form-actions">
-          <%= f.button :submit, "Log in", class: 'btn btn-success btn-md' %>
+          <%= f.button :submit, "Log in", class: 'btn btn-success btn-md m-2' %>
           </div>
           <% end %>
-          <%= render "devise/shared/links" %> 
+            <div class="d-flex justify-content-between">
+              <%= render "devise/shared/links" %> 
+            </div>
+
     </div>
   </div>
-  <%= link_to "back", root_path, class:"btn btn-primary" %>
 </div>
