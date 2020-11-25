@@ -17,8 +17,10 @@
             <li><i class="fas fa-map-pin workspace-icon"></i><%= @workspace.address %></li>
             <li><i class="fas fa-users workspace-icon"></i><%= @workspace.capacity %> Max </li>
             <li><i class="fab fa-bitcoin workspace-icon"></i><%= @workspace.daily_rate %>$ / Day</li>
-            <li><%= link_to "Edit Workspace", edit_workspace_path(@workspace) %></li>
-            <li><%= link_to "Delete", workspace_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+            <li class="u-center-text">
+              <%= link_to "Edit Workspace", edit_workspace_path(@workspace), class:"btn btn-home btn-center mg-right-md"  %>
+              <%= link_to "Delete", workspace_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-home btn-center"  %>
+            </li>
           </ul>
         </div>
       </div>
