@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:index, :destroy]
   root to: 'pages#home'
+  get "/team", to:'pages#team'
 end
