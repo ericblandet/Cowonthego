@@ -1,6 +1,6 @@
 <div class="grid-index">
   <div class="grid-index-right">
-    <section class="section">
+    <section class="section u-margin-bottom-lg">
       <% @workspaces.each do |workspace| %>
         <div class="card-grid">
           <a class="card" href= <%=workspace_path(workspace)%> >
@@ -11,8 +11,8 @@
                 <div class="card_background"></div>
               <% end %>
               <div class="card_content">
-                <p class="card_category"><%= workspace.address %></p>
-                <h3 class="card_heading"><%= workspace.name %></h3>
+                <h3 class="card_heading u-center-text"><%= workspace.name %></h3>
+                <p class="card_category"><i class="fas fa-map-pin icon"></i><%= workspace.address %></p>
               </div>
             </a>
           </div>
