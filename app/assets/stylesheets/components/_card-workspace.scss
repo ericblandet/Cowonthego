@@ -5,7 +5,9 @@
     $spacing-xl: 32px;
     $spacing-xxl: 64px;
     $width-container: 1200px;
-
+h1 {
+  color: black;
+}
 .section {
     align-items: center;
     display: grid;
@@ -87,3 +89,22 @@
     line-height: 1.4;
     word-spacing: 100vw;
   }
+
+
+.grid-index {
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  position:relative;
+}
+
+.grid-index-left {
+  height: 100vh;
+}
+
+#map {
+  // height: 100vh;
+  // width: 300px;
+  position:fixed;
+  margin-bottom:4rem;
+}
