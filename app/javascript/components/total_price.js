@@ -15,9 +15,8 @@ const computePrice = () => {
   }
 
     inputs.forEach((element) => {
-      element.addEventListener('change', (event) => {
-        let totalPrice = computedPrice();
-        if (isNaN(totalPrice)) {
+      element.addEventListener('change', () => {
+        if (isNaN(computedPrice())) {
           price.innerText = "";
         } else {
           price.innerText = `${computedPrice()} CHF`;
