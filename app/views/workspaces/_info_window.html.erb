@@ -1,4 +1,9 @@
 <div class="info_window">
-  <h2><%= workspace.name %></h2>
+  <h2><%= link_to workspace.name, workspace_path(workspace) %></h2>
   <p><%= workspace.address %></p>
+  <div class="container_img">
+    <% if workspace.photo.attached? %>
+      <%= cl_image_tag workspace.photo.key, class:'info_window_img' %>
+    <% end %>
+  </div>
 </div>
