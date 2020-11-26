@@ -1,8 +1,9 @@
 <div class="container">
-  <%= link_to "<<<", root_path, class:"btn btn-home mg-top-md" %>
-  <h2 class="u-center-text">Log in</h2>
+  <%= link_to "<<<", root_path, class:"btn btn-back mg-top-md" %>
+  
 
   <div class="row-new">
+  <h2 class="u-center-text">Log in</h2>
     <div class="col-lg-4">
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
@@ -15,14 +16,13 @@
                 input_html: { autocomplete: "current-password" } %>
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
-          <div class="form-actions">
-          <%= f.button :submit, "Log in", class: 'btn btn-success btn-md m-2' %>
+          <div class="form-actions u-center-text">
+            <%= f.button :submit, "Log in", class: 'btn btn-success btn-md m-2 ' %>
           </div>
           <% end %>
-            <div class="d-flex justify-content-between">
+            <div class="d-flex h-centered">
               <%= render "devise/shared/links" %> 
             </div>
-
     </div>
   </div>
 </div>
