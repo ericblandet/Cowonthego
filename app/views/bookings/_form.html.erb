@@ -3,14 +3,27 @@
     <div class="col-lg-6">
 
       <%= simple_form_for [@workspace, @booking] do |f| %>
+      <div class="d-flex justify-content-center">
+        <h2 class="text-muted"><%= @workspace.name %></h2>
+      </div>
+    <div class="mt-4 mb-4 d-flex justify-content-between card-booking">
+      <div>
+        <p>Daily_rate</p>  
+        <small class="border-bottom"><%= @workspace.daily_rate %> CHF / day</small>
+      </div>
+      <div class="text-right">
+        <p>Total Price</p> 
+        <small class="border-bottom">computed rate CHF / day</small>
+      </div>
+    </div>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true %>
         <%= f.input :number_of_persons, collection: Booking::NUMBER_OF_PERSONS %>
         <%= f.button :submit, "Book", class: "btn btn-primary btn-sm" %>
       <% end %>
-      <p>
-        <%= link_to 'Back to bookings', workspace_bookings_path %>
-      </p>
+
+
+
     </div>
   </div>
 </div>
