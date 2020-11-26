@@ -1,5 +1,5 @@
 <div class="container mg-tp-sm mg-btm-hg">
-    <%= link_to "<<<", workspaces_path, class:"btn btn-home mg-top-md" %> 
+    <%= link_to "<<<", workspaces_path, class:"btn btn-back mg-top-md" %> 
     <h2 class="u-center-text heading-sign-up ">Sign up</h2>
   <div class="row justify-content-center">
     <div class="col-lg-4">
@@ -32,7 +32,7 @@
                       input_html: { autocomplete: "new-password" } %>
         </div>
     <div class="form-actions d-flex justify-content-around mg-btm-hg">
-      <%= f.button :submit, "Sign up", class: 'btn btn-success'%>
+      <%= f.button :submit, "Sign up", class: 'btn btn-success btn-md m-2'%>
       <%= render "devise/shared/links"%>
     </div>
     
