@@ -1,7 +1,10 @@
-<div class="container mg-tp-md">
+<div class="container">
+    <%= link_to "<<<", workspaces_path, class:"btn btn-back mg-top-md" %> 
+    <h2 class="u-center-text heading-sign-up ">Forgot your password?</h2>
   <div class="row-new"> 
     <div class="col-lg-6">
-    <h2>Forgot your password?</h2>
+    
+    <h2></h2>
       <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= f.error_notification %>
 
@@ -12,12 +15,12 @@
                       input_html: { autocomplete: "email" } %>
         </div>
 
-        <div class="form-actions u-center-text">
-          <%= f.button :submit, "Send me reset password instructions", class:"btn btn-success mb-4" %>
+        <div class="form-actions u-center-text pd-btm-md">
+          <%= f.button :submit, "Reset password", class:"btn btn-success mb-4" %>
         </div>
       <% end %>
 
-      <div class="d-flex justify-content-end">
+      <div class="d-flex justify-content-start">
         <%= render "devise/shared/links" %>
       </div>
     </div>
