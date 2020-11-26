@@ -22,20 +22,20 @@
 
 
 .booking-form {
-	background-color: #fff;
-	padding: 50px 20px;
-	-webkit-box-shadow: 0px 5px 20px -5px $gray;
-	box-shadow: 0px 5px 20px -5px $gray;
+	background-color: rgba(244, 244, 244, 0.867);
+	padding: 35px 20px;
+	-webkit-box-shadow: 0px 5px 5px rgba(black,.3);
+	box-shadow: 0px 5px 5px  rgba(black,.3);
 	border-radius: 4px;
 }
 
 .booking-form .form-group {
 	position: relative;
 	margin-bottom: 30px;
+	text-align: center;
 }
 
 .booking-form .form-control {
-	background-color: #ebecee;
 	border-radius: 4px;
 	border: none;
 	height: 40px;
@@ -43,6 +43,11 @@
 	box-shadow: none;
 	color: $gray;
 	font-size: 14px;
+
+
+	&:focus {
+		border: 2px solid $primary-color;
+	}
 }
 
 .booking-form .form-control::-webkit-input-placeholder {
@@ -99,18 +104,25 @@
 	display: inline-block;
 	color: #fff;
 	background-color: $primary-color;
-	font-weight: 700;
-	padding: 14px 30px;
-	border-radius: 4px;
+	font-weight: 500;
+	padding: 12px 20px;
+	border-radius: 25px;
 	border: none;
 	-webkit-transition: 0.2s all;
 	transition: 0.2s all;
+	text-decoration: none;
 }
 
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
-	opacity: 0.9;
-	transform: scale(1.05) translateZ(0);
+	color: $primary-color;
+	background-color: transparent;
+	border: 2px solid white;
+	transform: scale(1.1) translateZ(0);
+}
+
+.col-md-pull-7 {
+	transform: translateX(80px);
 }
 
 .booking-cta {
