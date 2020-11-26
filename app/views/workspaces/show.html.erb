@@ -12,14 +12,16 @@
           <% end %>
         </div>
         <div class="card-details">
-        <p class="workspace_name u-center-text"><%= @workspace.name %></p>
+        <h3 class="workspace_name u-center-text"><%= @workspace.name %></h3>
+        <hr>
           <ul class="flexyflex">
             <li><i class="fas fa-map-pin workspace-icon"></i><%= @workspace.address %></li>
             <li><i class="fas fa-users workspace-icon"></i><%= @workspace.capacity %> Max </li>
             <li><i class="fab fa-bitcoin workspace-icon mg-btm-v-sm"></i><%= @workspace.daily_rate %>$ / Day</li>
+            <hr>
             <li class="u-center-text">
-              <%= link_to "Edit Workspace", edit_workspace_path(@workspace), class:"btn btn-home btn-center mg-right-md"  %>
-              <%= link_to "Delete", workspace_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-home btn-center"  %>
+              <%= link_to "Edit Workspace", edit_workspace_path(@workspace), class:"btn btn-edit btn-center mg-right-md"  %>
+              <%= link_to "Delete", workspace_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-edit btn-center"  %>
             </li>
           </ul>
         </div>
