@@ -14,9 +14,8 @@
 .footer-links {
   display: flex;
   align-items: center;
-
-  
 }
+
 .footer-links a {
   color: $primary-color;
   text-decoration: none;
@@ -29,6 +28,7 @@
     color: $primary-color;
   }
 }
+
 .footer-links a:hover {
   opacity: 1;
 }

@@ -1,22 +1,24 @@
-<h1 class="mg-top-lg u-center-text">My bookings</h1>
-
+<div class="heading">
+  <%= link_to "<<<", workspaces_path, class:"btn btn-back" %>
+  <h2 class="u-center-text">My bookings</h2>
+</div>
 <div class="container">
   <div class="cards-booking mg-tp-md">
     <% @bookings.each do |booking| %>
       <div class="card-booking">
         <%= link_to "+", booking_path(booking), method: :delete, class: "card-remove-link", data: {confirm: 'Are you sure you want to cancel this booking'} %>
         <%= cl_image_tag(booking.workspace.photo.key, crop: :fill) %>
+        <div class="card-booking-title">
+          <h2 class="mb-1"><%= booking.workspace.name %></h2>
+          <p><i class="fas fa-users workspace-icon"></i> <%= booking.number_of_persons %></p> 
+        </div>
         <div class="card-booking-infos">
           <div>
-            <h2><%= booking.workspace.name %></h2>
             <p><strong>from</strong> <%= booking.start_date.strftime("%a %d %b") %> <strong>to</strong> <%= booking.end_date.strftime("%a %d %b") %></p>
           </div>
           <h2 class="card-booking-pricing"><%= booking.total_price %> CHF</h2>
-        </div>  
+        </div>
       </div>
     <% end %>
   </div>
 </div>
-
-
-

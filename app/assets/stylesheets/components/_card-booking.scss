@@ -49,6 +49,25 @@
   width: 40px;
 }
 
+.card-booking .card-booking-title {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-booking-title .workspace-icon{
+  font-size: 1rem
+}
+
+.card-booking-title p{
+  font-size: 0.8rem;
+  font-weight: bold
+}
+
+
+
 .card-remove-link {
   background: white;
   color: $primary-color;
@@ -74,3 +93,4 @@
     opacity: 1;
   }
 }
+

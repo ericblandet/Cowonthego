@@ -1,16 +1,20 @@
+<div class="heading">
+  <%= link_to "<<<", workspaces_path, class:"btn btn-back" %>
+  <h2 class=" u-center-text trslt-lft-sm">Sign up</h2>
+</div>
+
 <div class="container mg-tp-sm mg-btm-hg">
-    <%= link_to "<<<", workspaces_path, class:"btn btn-back mg-top-md" %> 
-    <h2 class="u-center-text heading-sign-up ">Sign up</h2>
   <div class="row justify-content-center">
-    <div class="col-lg-4">
+    <div class="col-lg-6">
       
-        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= f.error_notification %>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
         <div class="form-inputs">
           <%= f.input :username,
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "Captain America" }%>
+          <div class="d-flex justify-content-between">
             <%= f.input :first_name,
                         required: true,
                         autofocus: true,
@@ -19,6 +23,7 @@
                         required: true,
                         autofocus: true,
                         input_html: { autocomplete: "Captain America" }%>
+          </div>            
           <%= f.input :email,
                       required: true,
                       autofocus: true,
@@ -31,12 +36,10 @@
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
         </div>
-    <div class="form-actions d-flex justify-content-around mg-btm-hg">
-      <%= f.button :submit, "Sign up", class: 'btn btn-success btn-md m-2'%>
-      <%= render "devise/shared/links"%>
-    </div>
-    
-    <% end %>
+      <div class="form-actions d-flex justify-content-start">
+        <%= f.button :submit, "Sign up", class: 'btn btn-success btn-md m-2'%>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>

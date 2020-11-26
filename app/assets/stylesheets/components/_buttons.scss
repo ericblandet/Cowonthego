@@ -41,3 +41,16 @@
     border-radius: 25px;
   }
 }
+
+.btn-edit {
+  padding: 10px 15px;
+  color: black;
+  border: 1px solid rgba($primary-color, .6);
+  background-color: white;
+  border-radius: 10px;
+
+  &:hover {
+    color: white;
+    background-color: $primary-color;
+  }
+}
