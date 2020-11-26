@@ -5,8 +5,9 @@
 .workspace-icon{
   color: $primary-color;
   font-size: 24px;
-  padding: 1.4rem;
-  width:5rem;
+  padding: .5rem;
+  text-shadow: 2px 2px 2px rgba($black, .5);
+  padding: .5rem;
 }
 
 .icon {
@@ -20,3 +21,4 @@
   color: white;
   padding-right:10px;
 }
+
