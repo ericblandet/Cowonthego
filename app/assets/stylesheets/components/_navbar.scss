@@ -9,6 +9,7 @@
   z-index:888;
   p {
     padding-top:15px;
+    transform: translateX(150px);
   }
 }
 
@@ -33,11 +34,7 @@
   letter-spacing: 3px;
   font-size: 20px;
   font-weight: 100px;
-  span {
-    text-transform: uppercase;
-    color:$green;
-    font-weight: 400;
-  }
+  
 }
 
 .navbar-brand {
