@@ -5,7 +5,6 @@ const endDateInput = document.getElementById("booking_end_date");
 const numberOfPersonsInput = document.getElementById("booking_number_of_persons");
 const inputs = document.querySelectorAll(".form-control")
 
-
 const computePrice = () => {
   const computedPrice = () => {
     const dailyRateInt = parseInt(dailyRate.innerText.match(/\d+/)[0], 10);
@@ -23,7 +22,6 @@ const computePrice = () => {
         }
       });
     });
-
 }
 
 export { computePrice };
