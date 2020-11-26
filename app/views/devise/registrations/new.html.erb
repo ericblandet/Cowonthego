@@ -33,10 +33,9 @@
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
         </div>
-      <div class="form-actions d-flex justify-content-end mg-btm-hg">
+      <div class="form-actions d-flex justify-content-start">
         <%= f.button :submit, "Sign up", class: 'btn btn-success btn-md m-2'%>
       </div>
-      <%= render "devise/shared/links"%>
       <% end %>
     </div>
   </div>
