@@ -7,28 +7,29 @@
           <%= f.input :end_date, as: :date, html5: true%>
         </div>
         <%= f.input :number_of_persons, collection: Booking::NUMBER_OF_PERSONS, id:"number_of_persons" %>
-        <div class="d-flex justify-content-center">
+          <div class="d-flex justify-content-center mt-3">
+            <div class="card-booking">
+              <%= cl_image_tag(@workspace.photo.key, crop: :fill) %>
+              <div class="card-booking-title py-1">
+              <%= link_to workspace_path(@workspace) do %>
+                <h2 class="mb-1"><%= @workspace.name %></h2>
+              <% end %>
+                <p><i class="fas fa-users workspace-icon"></i> <span id="persons"></span> <%= @workspace.capacity %></p> 
+              </div>
+              <div class="card-booking-infos pt-1">
+                <div>
+                  <small id="daily_rate"><%= @workspace.daily_rate %> CHF / day</small>
+                </div>
+                <h2 class="card-booking-pricing" id="computed_price"></h2>
+              </div>
+            </div>
+          </div>
+        <div class="d-flex justify-content-center mt-3">
           <%= f.button :submit, "Book", class: "btn btn-home btn-sm " %>
         </div>
       <% end %>
 
-      <div class="d-flex justify-content-center mt-3">
-        <div class="card-booking">
-          <%= cl_image_tag(@workspace.photo.key, crop: :fill) %>
-          <div class="card-booking-title py-1">
-          <%= link_to workspace_path(@workspace) do %>
-            <h2 class="mb-1"><%= @workspace.name %></h2>
-          <% end %>
-            <p><i class="fas fa-users workspace-icon"></i> <span id="persons"></span>/ <%= @workspace.capacity %></p> 
-          </div>
-          <div class="card-booking-infos pt-1">
-            <div>
-              <small id="daily_rate"><%= @workspace.daily_rate %> CHF / day</small>
-            </div>
-            <h2 class="card-booking-pricing" id="computed_price"></h2>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </div>

@@ -77,4 +77,21 @@ class BookingsController < ApplicationController
       new_sum_bookings <= Workspace.find(params[:workspace_id]).capacity
     end
   end
+
+  def sum
+    date_array = (params[:booking][:start_date]..params[:booking][:end_date]).to_a
+    # In this Array, we need to verify for each element = day, that the capacity is not exceeded
+    date_array.all? do |date|
+      # Extract all the bookings corresponding to this day, and to to the workspace
+      bookings = Booking.where(
+                                "bookings.workspace_id = :workspace_id
+                                AND :date >= bookings.start_date
+                                AND :date <= bookings.end_date",
+                                workspace_id: params[:workspace_id],
+                                date: date
+                              )
+      # Sum all the persons of all the bookings of this day
+      sum_bookings = bookings.sum(:number_of_persons)
+    end
+  end
 end

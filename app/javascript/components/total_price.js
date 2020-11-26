@@ -4,7 +4,7 @@ const startDateInput = document.getElementById("booking_start_date");
 const endDateInput = document.getElementById("booking_end_date");
 const numberOfPersonsInput = document.getElementById("booking_number_of_persons");
 const inputs = document.querySelectorAll(".form-control");
-const persons = document.getElementById("persons");
+// const persons = document.getElementById("persons");
 
 const computePrice = () => {
   const computedPrice = () => {
@@ -24,10 +24,10 @@ const computePrice = () => {
       });
     });
 
-    numberOfPersonsInput.addEventListener('change', () => {
-      persons.innerText = numberOfPersonsInput.value
-    });
-
+    // numberOfPersonsInput.addEventListener('change', () => {
+    //   persons.innerText = numberOfPersonsInput.value
+    // });
+  
 }
 
 export { computePrice };
