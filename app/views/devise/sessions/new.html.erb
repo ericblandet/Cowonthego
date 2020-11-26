@@ -1,9 +1,9 @@
+<div class="heading">
+  <%= link_to "<<<", workspaces_path, class:"btn btn-back" %>
+  <h2 class="u-center-text trslt-lft-sm">Log in</h2>
+</div>
 <div class="container">
-  <%= link_to "<<<", root_path, class:"btn btn-back mg-top-md" %>
-  
-
   <div class="row-new">
-  <h2 class="u-center-text">Log in</h2>
     <div class="col-lg-6">
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
