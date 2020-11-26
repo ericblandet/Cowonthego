@@ -20,8 +20,10 @@
             <li><i class="fab fa-bitcoin workspace-icon mg-btm-v-sm"></i><%= @workspace.daily_rate %>$ / Day</li>
             <hr>
             <li class="u-center-text">
-              <%= link_to "Edit Workspace", edit_workspace_path(@workspace), class:"btn btn-edit btn-center mg-right-md"  %>
-              <%= link_to "Delete", workspace_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-edit btn-center"  %>
+              <% if current_user == @workspace.user%>
+                <%= link_to "Edit Workspace", edit_workspace_path(@workspace), class:"btn btn-edit btn-center mg-right-md"  %>
+                <%= link_to "Delete", workspace_path, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-edit btn-center"  %>
+              <%end%>
             </li>
           </ul>
         </div>
