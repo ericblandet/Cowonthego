@@ -1,17 +1,16 @@
 <div class="container mg-tp-md">
-  <div class="div_workspace_btn">
-    <%= link_to 'back', workspaces_path, class:"btn btn-home"%>
-  </div>
   <div class="row justify-content-center">
     <div class="col-lg-6">
       <%= simple_form_for @workspace do |f| %>
         <%= f.input :name, placeholder: 'IdeaFactory' %>
         <%= f.input :description, placeholder: 'A quiet space for the concentrated mind' %>
         <%= f.input :address, placeholder: '25 street Renens' %>
-        <%= f.input :capacity %>
-        <%= f.input :daily_rate, placeholder: '$14.50' %>
+        <%= f.input :capacity, input_html: { min: '1', step: '1' } %>
+        <%= f.input :daily_rate, placeholder: '$14.50', input_html: { min: '1', step: '1' } %>
         <%= f.input :photo, as: :file %>
-        <%= f.button :submit, "Create", class: "btn btn-home" %>
+        <div class=" h-centered">
+        <%= f.button :submit, "Create", class: "btn btn-home u-margin-bottom-md" %>
+        </div>
       <% end %>
     </div>
   </div>
