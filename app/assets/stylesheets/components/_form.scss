@@ -1,9 +1,11 @@
-.div_workspace_btn {
-  width: 100%;
-  margin-top: 2000px;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:center;
-  border: 1px solid black;
+.heading-create {
+  margin-top: 5rem;
+  display:grid;
+  grid-template-columns: 1fr 11fr;
+
+  h2 {
+    width:50vw;
+    text-align:center;
+    transform: translateX(200px);
+  }
 }
