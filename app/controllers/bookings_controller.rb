@@ -17,10 +17,14 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.build(booking_params)
     @workspace = Workspace.find(params[:workspace_id])
     @booking.workspace = @workspace
-    @booking.total_price = (@booking.end_date - @booking.start_date) * @workspace.daily_rate
-
-    if @booking.save
-      redirect_to bookings_path
+    @booking.total_price = (@booking.end_date - @booking.start_date + 1) * @workspace.daily_rate * @booking.number_of_persons
+    
+    if is_there_still_place?
+      if @booking.save
+        redirect_to bookings_path
+      else
+        render 'new'
+      end
     else
       render 'new'
     end
@@ -45,10 +49,20 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :total_price)
+    params.require(:booking).permit(:start_date, :end_date, :total_price, :number_of_persons)
   end
 
   def find_booking
     @booking = Booking.find(params[:id])
+  end
+
+  def is_there_still_place?
+    date_array = (params[:booking][:start_date]..params[:booking][:end_date]).to_a
+    date_array.all? do |date|
+      bookings = Booking.where("bookings.workspace_id = :workspace_id AND :date >= bookings.start_date AND :date <= bookings.end_date", workspace_id: params[:workspace_id], date: date)
+      sum_bookings = bookings.sum(:number_of_persons)
+      new_sum_bookings = sum_bookings + params[:booking][:number_of_persons].to_i
+      new_sum_bookings <= Workspace.find(params[:workspace_id]).capacity
+    end
   end
 end

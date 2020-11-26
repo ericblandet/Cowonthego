@@ -3,8 +3,9 @@ puts "seeding in process"
 def rand_dates
   # return a random date within 30 days of today in both past and future directions.
   n = rand(0..30)
+  m  = n + rand(0..5)
   date_1 = Date.today.advance(days: n)
-  date_2 = Date.today.advance(days: n)
+  date_2 = Date.today.advance(days: m)
   if date_1 < date_2
     return [date_1, date_2]
   else
@@ -223,12 +224,16 @@ end
 10.times do
   puts "creating booking"
   office = Workspace.all.sample
-  booking = Booking.create(
-                          start_date: rand_dates[0],
-                          end_date: rand_dates[1],
-                          user_id: User.all.sample,
+  booking_dates = rand_dates
+  puts "#{booking_dates[0]} to #{booking_dates[1]}"
+  number_of_persons = rand(1..3)
+  booking = Booking.create!(
+                          start_date: booking_dates[0],
+                          end_date: booking_dates[1],
+                          user_id: User.all.sample.id,
                           workspace_id: office.id,
-                          total_price: office.daily_rate
+                          number_of_persons: number_of_persons,
+                          total_price: office.daily_rate * (booking_dates[1] - booking_dates[0] + 1) * number_of_persons
                         )
 end
 
