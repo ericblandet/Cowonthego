@@ -10,7 +10,7 @@
         <%= cl_image_tag(booking.workspace.photo.key, crop: :fill) %>
         <div class="card-booking-title py-1">
         <%= link_to workspace_path(booking.workspace) do %>
-          <h2 class="mb-1" id="title"><%= booking.workspace.name %></h2>
+          <h2 class="mb-1"><%= booking.workspace.name %></h2>
         <% end %>
           <p><i class="fas fa-users workspace-icon"></i> <%= booking.number_of_persons %></p> 
         </div>
