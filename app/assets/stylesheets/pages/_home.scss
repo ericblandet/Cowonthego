@@ -116,6 +116,10 @@
 .booking-cta {
 	margin-top: 80px;
 	margin-bottom: 30px;
+	background-color:rgba(black,.4);
+	text-align: center;
+	border-radius: 5px;
+	padding: 2px;
 }
 
 .booking-cta h1 {
@@ -126,7 +130,6 @@
 }
 
 .booking-cta p {
-	font-size: 16px;
+	font-size: 20px;
 	color: $light-gray;
-	background-color:rgba(black,.2);
 }
