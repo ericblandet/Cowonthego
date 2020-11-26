@@ -1,0 +1,10 @@
+.heading {
+  margin-top:6rem;
+  display: grid;
+  grid-template-columns: 100px auto;
+  column-gap: 10rem;
+
+  h2 {
+    width: 70vw;
+  }
+}
