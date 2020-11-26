@@ -1,5 +1,5 @@
-<div class="container mt-32">
-  <div class="row d-flex justify-content-center">
+<div class="container mt-32"  >
+  <div class="row d-flex justify-content-center mt-3">
     <div class="col-lg-3">
       <%= simple_form_for [@workspace, @booking] do |f| %>
           <%= f.input :start_date, as: :date, html5: true%>
@@ -11,7 +11,7 @@
       <% end %>
     </div>
     <div class="col-lg-3">
-      <div class="d-flex justify-content-center mt-3">
+      <div class="d-flex justify-content-center my-3">
         <div class="card-booking">
           <%= cl_image_tag(@workspace.photo.key, crop: :fill) %>
           <div class="card-booking-title py-1">
@@ -35,3 +35,13 @@
     </div>
   </div>
 </div>
+
+<% if @full == true %>
+  <div class="flash flash-danger alert-center alert-dismissible fade show" role="alert">
+    <span><strong>Oops!</strong> 😱 <br>it looks like the workspace is full at these dates</span>
+    <a data-dismiss="alert" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+  <% else %>
+<% end %>

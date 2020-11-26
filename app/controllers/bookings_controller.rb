@@ -14,12 +14,14 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @full = false
     @booking = current_user.bookings.build(booking_params)
     @workspace = Workspace.find(params[:workspace_id])
     @booking.workspace = @workspace
     @booking.total_price = (@booking.end_date - @booking.start_date + 1) * @workspace.daily_rate * @booking.number_of_persons
     
-    if is_there_still_place?
+    @full = is_it_full?
+    if @full != true 
       if @booking.save
         redirect_to bookings_path
       else
@@ -56,7 +58,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def is_there_still_place?
+  def is_it_full?
     # Create an array of "dates" for each day booked
     date_array = (params[:booking][:start_date]..params[:booking][:end_date]).to_a
     # In this Array, we need to verify for each element = day, that the capacity is not exceeded
@@ -74,24 +76,7 @@ class BookingsController < ApplicationController
       # Add the number_of_persons the user wants to book for
       new_sum_bookings = sum_bookings + params[:booking][:number_of_persons].to_i
       # Compares the future number of persons (if the booking is accepted) to the capacity of workspace
-      new_sum_bookings <= Workspace.find(params[:workspace_id]).capacity
-    end
-  end
-
-  def sum
-    date_array = (params[:booking][:start_date]..params[:booking][:end_date]).to_a
-    # In this Array, we need to verify for each element = day, that the capacity is not exceeded
-    date_array.all? do |date|
-      # Extract all the bookings corresponding to this day, and to to the workspace
-      bookings = Booking.where(
-                                "bookings.workspace_id = :workspace_id
-                                AND :date >= bookings.start_date
-                                AND :date <= bookings.end_date",
-                                workspace_id: params[:workspace_id],
-                                date: date
-                              )
-      # Sum all the persons of all the bookings of this day
-      sum_bookings = bookings.sum(:number_of_persons)
+      new_sum_bookings > Workspace.find(params[:workspace_id]).capacity
     end
   end
 end
