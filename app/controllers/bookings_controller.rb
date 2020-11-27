@@ -22,9 +22,9 @@ class BookingsController < ApplicationController
       @booking.total_price = (@booking.end_date - @booking.start_date + 1) * @workspace.daily_rate * @booking.number_of_persons
     end
 
-    @full = is_it_full?
+    @free = is_there_place?
 
-    if @full != true 
+    if @free == true 
       if @booking.save
         redirect_to bookings_path
       else
@@ -61,7 +61,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def is_it_full?
+  def is_there_place?
     if @booking.valid?
       # Create an array of "dates" for each day booked
       date_array = (params[:booking][:start_date]..params[:booking][:end_date]).to_a
@@ -80,7 +80,7 @@ class BookingsController < ApplicationController
         # Add the number_of_persons the user wants to book for
         new_sum_bookings = sum_bookings + params[:booking][:number_of_persons].to_i
         # Compares the future number of persons (if the booking is accepted) to the capacity of workspace
-        new_sum_bookings > Workspace.find(params[:workspace_id]).capacity
+        new_sum_bookings <= Workspace.find(params[:workspace_id]).capacity
       end
     end
   end
