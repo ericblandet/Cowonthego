@@ -2,7 +2,12 @@ class WorkspacesController < ApplicationController
   before_action :set_workspace, only: [:show, :edit, :update, :destroy]
 
   def index
-    @workspaces = Workspace.all
+    if params[:query].present?
+      sql_query = "address ILIKE :query OR name ILIKE :query"
+      @workspaces = Workspace.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @workspaces = Workspace.all
+    end
     @markers = @workspaces.geocoded.map do |workspace|
       {
         lat: workspace.latitude,
