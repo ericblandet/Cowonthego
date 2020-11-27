@@ -6,7 +6,7 @@
   <div class="cards-booking mg-tp-md">
     <% @bookings.each do |booking| %>
       <div class="card-booking">
-        <%= link_to "+", booking_path(booking), method: :delete, class: "card-remove-link", data: {confirm: 'Are you sure you want to cancel this booking'} %>
+        <%= link_to "+", booking_path(booking), method: :delete, remote:true, class: "card-remove-link", data: {confirm: 'Are you sure you want to cancel this booking'} %>
         <%= cl_image_tag(booking.workspace.photo.key, crop: :fill) %>
         <div class="card-booking-title py-1">
         <%= link_to workspace_path(booking.workspace) do %>
