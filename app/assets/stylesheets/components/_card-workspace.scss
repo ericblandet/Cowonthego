@@ -9,12 +9,12 @@ h1 {
   color: black;
 }
 .section {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: $spacing-xl;
-    row-gap: $spacing-xl;
-    padding: $spacing-xl;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: $spacing-xl;
+  row-gap: $spacing-xl;
+  padding: 5px 20px;
 }
 
 .card {
@@ -95,12 +95,6 @@ h1 {
   padding-bottom:5px;
 }
 
-// .card-grid {
-//   &:last-child {
-//     margin-bottom: 6rem;
-//   }
-// }
-
 .grid-index {
   padding-top: 3.7rem;
   display: grid;
@@ -112,3 +106,20 @@ h1 {
   height: 100vh;
 }
 
+.form-index {
+  width: 100%;
+  margin-top:0 auto;
+  text-align: center;
+  h2 {
+    margin-bottom: 10px;
+  }
+  #query {
+    width: 50%;
+  }
+}
+
+.form-control-index {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom:10px;
+}

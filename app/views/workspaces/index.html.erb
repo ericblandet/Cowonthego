@@ -1,6 +1,17 @@
 <div class="grid-index">
   <div class="grid-index-right">
-    <section class="section u-margin-bottom-lg">
+    <div class="form-group form-index">
+      <h2 class="search_heading">What location are you looking for ?</h2>
+      <%= form_tag workspaces_path, method: :get do %>
+        <%= text_field_tag :query,
+            params[:query],
+            class: "form-control form-control-index",
+            placeholder: "Enter a localisation"
+        %>
+        <%= submit_tag "Search", class: "btn btn-edit" %>
+      <% end %>
+    </div>
+    <section class="section u-margin-bottom-md">
       <% @workspaces.each do |workspace| %>
         <div class="card-grid">
           <a class="card" href= <%=workspace_path(workspace)%> >

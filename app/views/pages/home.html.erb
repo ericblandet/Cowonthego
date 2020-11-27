@@ -11,7 +11,11 @@
          </div>
          <div class="col-md-4 col-md-pull-8">
             <div class="booking-form">
-               <form>
+               <div class="col-sm-12 u-center-text">
+                  <h3>Check our working space</h3>
+                  <%= link_to 'Check availability', workspaces_path, class:"submit-btn" %>
+               </div>
+               <%# <form>
                   <div class="form-group">
                      <span class="form-label">Your Location</span>
                      <input class="form-control" type="text" placeholder="Enter a localisation">
@@ -49,12 +53,9 @@
                            <span class="select-arrow"></span>
                         </div>
                      </div>
-                     <div class="col-sm-12 u-center-text">
-                        <%= link_to 'Check availability', workspaces_path, class:"submit-btn" %>
-                     </div>
                   </div>
-               </form>
-               </div>
+               </form> %>
+            </div>
             </div>
          </div>
       </div>
