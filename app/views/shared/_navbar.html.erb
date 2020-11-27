@@ -15,7 +15,11 @@
       <li><%= link_to "Workspaces",  workspaces_path , class: "nav-link" %> </li>
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <%= image_tag "https://randomuser.me/api/portraits/thumb/women/24.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%= image_tag "https://randomuser.me/api/portraits/thumb/women/24.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "See my bookings", bookings_path, class: "dropdown-item" %>
             <%= link_to "Create a workspace", new_workspace_path, class: "dropdown-item" %>
