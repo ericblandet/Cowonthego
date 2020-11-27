@@ -17,14 +17,14 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.build(booking_params)
     @workspace = Workspace.find(params[:workspace_id])
     @booking.workspace = @workspace
-    
+
     if @booking.valid?
       @booking.total_price = (@booking.end_date - @booking.start_date + 1) * @workspace.daily_rate * @booking.number_of_persons
     end
 
     @full = is_it_full?
 
-    if @full != true 
+    if @full == false 
       if @booking.save
         redirect_to bookings_path
       else
@@ -82,6 +82,8 @@ class BookingsController < ApplicationController
         # Compares the future number of persons (if the booking is accepted) to the capacity of workspace
         new_sum_bookings > Workspace.find(params[:workspace_id]).capacity
       end
+    else
+      false
     end
   end
 end
