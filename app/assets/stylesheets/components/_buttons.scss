@@ -42,6 +42,24 @@
   }
 }
 
+.btn-main {
+  color: white;
+  font-size:28px;
+  font-weight:500;
+  letter-spacing: 5px;
+  transition: all .7s;
+  text-transform: uppercase;
+  background-color: $primary-color;
+  border-radius: 25px;
+
+  &:hover {
+    background-color: transparent;
+    color:white;
+    border: 1px solid $medium-gray;
+    border-radius: 25px;
+  }
+}
+
 .btn-edit {
   padding: 10px 15px;
   color: black;

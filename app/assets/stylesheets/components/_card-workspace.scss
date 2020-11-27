@@ -8,7 +8,7 @@ $width-container: 1200px;
 h1 {
   color: black;
 }
-.section {
+.section-work {
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -122,4 +122,12 @@ h1 {
   width: 50%;
   margin: 0 auto;
   margin-bottom:10px;
+}
+
+.search_input {
+  display: grid;
+  grid-template-columns: 2fr 100px;
+  margin: 0 auto;
+  margin-right: 10rem;
+  margin-top:1rem;
 }
