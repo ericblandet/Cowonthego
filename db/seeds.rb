@@ -34,7 +34,7 @@ User.create!(
 puts "1 - adding The Office"
 workspace = Workspace.create!(name:"The Office",
                               description:"Where creativity comes true, a nice a cosy little coworking space. It's like home",
-                              address:"Avenue de Sévelin 13B, Lausanne",
+                              address:"Avenue de Sévelin 13B, Lausanne, Switzerland",
                               capacity: 12,
                               daily_rate: 50,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -47,7 +47,7 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 puts "2 - adding Gotham Lausanne"
 workspace = Workspace.create!(name:"Gotham Lausanne",
                               description:"The biggest coworking of Switzerland, all utilities you need",
-                              address:"Avenue de la gare, Lausanne",
+                              address:"Avenue de la gare, Lausanne, Switzerland",
                               capacity: 50,
                               daily_rate: 75,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -60,7 +60,7 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 puts "3 - adding Mountain Hub"
 workspace = Workspace.create!(name:"Mountain Hub",
                               description:"Your coworking in a resort: ski, code, drink, sleep, repeat",
-                              address:"Rue de Médran 3, 1936 Verbier",
+                              address:"Rue de Médran 3, 1936 Verbier, Switzerland",
                               capacity: 50,
                               daily_rate: 69,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -73,7 +73,7 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 puts "4 - adding Mass Challenge"
 workspace = Workspace.create!(name:"Mass Challenge",
                               description:"The best swiss start-up incubator. Fun Fact: you could meet some famous students from LeWagon Lausanne...We've been said that there would be a bar in the building...",
-                              address:"Chemin du Closel 5, 1020 Renens",
+                              address:"Chemin du Closel 5, 1020 Renens, Switzerland",
                               capacity: 36,
                               daily_rate: 49,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -89,7 +89,7 @@ workspace = Workspace.create!(name:"Sev52",
                               Offrir un lieu partagé en plusieurs espaces distincts et flexibles, suffisamment grand pour donner libre cours à ses projets. L’endroit est propice aux échanges les plus divers et variés.
                               La formule magique?
                               De la place, un loyer raisonnable, un environnement stable mais éclectique, et un accès 24h/24.",
-                              address:"Avenue de Sévelin 52, 1004 Lausanne",
+                              address:"Avenue de Sévelin 52, 1004 Lausanne, Switzerland",
                               capacity: 15,
                               daily_rate: 80,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -102,7 +102,7 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 puts "6 - adding Work'n'Share"
 workspace = Workspace.create!(name:"Work'n'Share",
                               description:"Work’n’Share c’est votre espace de coworking au coeur de la Suisse Romande à Lausanne Ouchy. Cet espace est dédié aux entrepreneurs, start ups, indépendants, salariés de tout horizon qui veulent travailler et recevoir leurs clients dans un cadre dynamique, convivial et professionnel.",
-                              address:"Rue du Liseron 7, 1006 Lausanne",
+                              address:"Rue du Liseron 7, 1006 Lausanne, Switzerland",
                               capacity: 50,
                               daily_rate: 60,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -115,7 +115,7 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 puts "7 - adding SportWorks"
 workspace = Workspace.create!(name:"SportWorks",
                               description:"SportWorks is the co-working community for sport business professionals based in the heart of the Olympic Capital in the prestigious Maison du Sport International. We offer an experience that goes beyond co-working in Lausanne. Here, members become part of a long-term community with the influencers of the sport business.",
-                              address:"Avenue de Rhodanie 54, 1007 Lausanne",
+                              address:"Avenue de Rhodanie 54, 1007 Lausanne, Switzerland",
                               capacity: 25,
                               daily_rate: 30,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -128,7 +128,7 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 puts "8 - adding Passage 9"
 workspace = Workspace.create!(name:"Passage 9",
                               description:"Besoin d'une ou plusieurs places de travail pour monter votre projet ou votre startup? L'espace de co-working Passage 9 vous propose des places de travail entièrement équipées dans un cadre de travail unique.",
-                              address:"PASSAGE ST-FRANÇOIS 9, CH-1003 LAUSANNE",
+                              address:"PASSAGE ST-FRANÇOIS 9, CH-1003 LAUSANNE, Switzerland",
                               capacity: 10,
                               daily_rate: 45,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -141,7 +141,7 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 puts "9 - adding Impact hub Lausanne"
 workspace = Workspace.create!(name:"Impact hub Lausanne",
                               description:"Nous proposons un espace inspirant et du soutien pour une communauté dynamique porteuse de projets et d’événements impactants !",
-                              address:"Rue du Jura 11, CH - 1004 Lausanne",
+                              address:"Rue du Jura 11, CH - 1004 Lausanne, Switzerland",
                               capacity: 45,
                               daily_rate: 65,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -154,7 +154,7 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 puts "10 - adding ThinkSpace"
 workspace = Workspace.create!(name:"ThinkSpace",
                               description:"Nous proposons aux start-ups et PME de venir s’installer dans des locaux accueillants en plein cœur de Lausanne. La communauté du ThinkSpace vous permet de travailler dans un lieu de vie professionnel, dynamique et ergonomique où il fait bon se rencontrer et partager ses expériences, tout en se concentrant sur son activité de manière optimale.",
-                              address:"Rue Etraz 4, CH-1003 Lausanne",
+                              address:"Rue Etraz 4, CH-1003 Lausanne, Switzerland",
                               capacity: 18,
                               daily_rate: 40,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -168,7 +168,7 @@ puts "11 - adding T19 bis"
 workspace = Workspace.create!(name:"T19 bis",
                               description:"L’espace coworking du T19 bis à Lausanne a été créé par Marina et Laurent Bonnet, fondateurs de plusieurs PME lausannoises de e-commerce.
                               Ouvrir un espace où toute sorte de personnes qui exercent toutes sortes d’activités peuvent se rencontrer et échanger a été une évidence pour eux. Imaginez venir travailler le matin et saluer vos collègues comme si vous les connaissiez depuis des années. Pouvoir rencontrer d’autre startuppers qui sont passés par les mêmes étapes que vous ou alors simplement rire autour d’un verre une après-midi sur la terrasse. C’est exactement l’ambiance que recherchaient Marina et Laurent! Une ambiance accueillante, chaleureuse et très fun où on a pas l’impression de travailler!",
-                              address:"Avenue de Tivoli 19bis – 1007 Lausanne",
+                              address:"Avenue de Tivoli 19bis – 1007 Lausanne, Switzerland",
                               capacity: 16,
                               daily_rate: 39,
                               user_id: User.find_by(email:"eric@lewagon.com").id
@@ -178,6 +178,120 @@ puts "adding pictures to #{workspace.name}"
 file = URI.open("https://t19bis.ch/wp-content/uploads/sites/21/2018/09/coworking-haut-petit.jpg")
 workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
+puts "12 - adding Dojo Bali"
+workspace = Workspace.create!(name:"Dojo Bali",
+                              description:"Discover Dojo Coworking Bali.
+                              The best place to work and enjoy life.
+                              Close to the sea, we have a huge community of digital nomads working here daily",
+                              address:"Canggu, bali",
+                              capacity: 50,
+                              daily_rate: 12,
+                              user_id: User.find_by(email:"eric@lewagon.com").id
+                            )
+
+puts "adding pictures to #{workspace.name}"
+file = URI.open("https://www.mime.asia/wp-content/uploads/2020/05/1-11.jpg")
+workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+
+puts "13 - adding Coworking LA"
+workspace = Workspace.create!(name:"Le Café L.A.",
+                              description:"Peaceful, high end coworking space in the city center of LA.
+                              ",
+                              address:"Los Angeles, USA",
+                              capacity: 100,
+                              daily_rate: 100,
+                              user_id: User.find_by(email:"eric@lewagon.com").id
+                            )
+
+puts "adding pictures to #{workspace.name}"
+file = URI.open("https://miro.medium.com/max/2560/1*wtRpSxtyE0q5Ox44wY5zMQ.jpeg")
+workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+
+puts "13 - adding Wojo Lyon"
+workspace = Workspace.create!(name:"Wojo Lyon",
+                              description:"Notre espace évolutif pour entrepreneurs propose au sein de ses espaces, des bureaux privatifs et des postes en coworking
+                              Idéalement, situé sur la presqu’ile de Lyon Paris 2, sur les quais entre le pont Lafayette et le pont Wilson. Métro Cordeliers.
+                              ",
+                              address:"8 quai Jules Courmont, 69000 Lyon, France",
+                              capacity: 25,
+                              daily_rate: 34,
+                              user_id: User.find_by(email:"eric@lewagon.com").id
+                            )
+
+puts "adding pictures to #{workspace.name}"
+file = URI.open("https://cdn-images.welcometothejungle.com/dX7VRoI9ZdXua3-pj5dFgxrUPHo7KYiY9Y_vf-p4Enk/rs:auto:1500::/q:85/czM6Ly93dHRqLXByb2R1Y3Rpb24vdXBsb2Fkcy9hcnRpY2xlL2ltYWdlLzQ0NzcvMTUwNTc0L2xlcy1tZWlsbGV1cnMtZXNwYWNlcy1kZS1jb3dvcmtpbmctYS1seW9uLmpwZw")
+workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+
+puts "14 - Empower Office Suites"
+workspace = Workspace.create!(name:"Empower Office Suites",
+                              description:"A fully furnished and equipped workspace located in a prime location within the main Central Business District in Accra. Empower Office Suites is bordered by major hotels like Movenpick, Kempinski as well as Accra City Hotel. We are less than half-hour from the Airport and Accra-Tema motorway.
+                              ",
+                              address:"Barnes Road, Accra, Ghana",
+                              capacity: 23,
+                              daily_rate: 54,
+                              user_id: User.find_by(email:"eric@lewagon.com").id
+                            )
+
+puts "adding pictures to #{workspace.name}"
+file = URI.open("https://cdn-images.welcometothejungle.com/dX7VRoI9ZdXua3-pj5dFgxrUPHo7KYiY9Y_vf-p4Enk/rs:auto:1500::/q:85/czM6Ly93dHRqLXByb2R1Y3Rpb24vdXBsb2Fkcy9hcnRpY2xlL2ltYWdlLzQ0NzcvMTUwNTc0L2xlcy1tZWlsbGV1cnMtZXNwYWNlcy1kZS1jb3dvcmtpbmctYS1seW9uLmpwZw")
+workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+
+puts "15 - The Hub Chiang Mai"
+workspace = Workspace.create!(name:"The Hub Chiang Mai",
+                              description:"The Hub Chiang Mai is a coworking space dedicated to sustainability, experiential learning, and community. The difference between The Hub Chiang Mai and most other coworking spaces, however, is that The Hub really does live by its values.",
+                              address:"Chiang Mai, Thailand",
+                              capacity: 33,
+                              daily_rate: 12,
+                              user_id: User.find_by(email:"eric@lewagon.com").id
+                            )
+
+puts "adding pictures to #{workspace.name}"
+file = URI.open("https://www.coworker.com/mag/wp-content/uploads/2018/08/31944381_1882905511760926_7811814984731590656_o.jpg")
+workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+
+
+puts "16 - The commons"
+workspace = Workspace.create!(name:"The commons",
+                              description:"Our mission is to provide an environment that allows businesses to connect and grow, and we achieve this through continuous research and mindful consideration of every aspect within our spaces.",
+                              address:"3 Albert Coates Ln, Melbourne VIC 3000, Australia",
+                              capacity: 23,
+                              daily_rate: 54,
+                              user_id: User.find_by(email:"eric@lewagon.com").id
+                            )
+
+puts "adding pictures to #{workspace.name}"
+file = URI.open("https://thecommons.com.au/app/uploads/3.-Our-Spaces-2-1024x684.jpg")
+workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+
+
+
+puts "17 - The Thinking Hut"
+workspace = Workspace.create!(name:"The Thinking Hut",
+                              description:"Make a home for your business with a Regus private office. Our fully equipped workspaces have everything taken care of – from the furniture to the high-speed WiFi – so you can focus on driving your business forward.",
+                              address:"Amsterdam, Netherlands",
+                              capacity: 13,
+                              daily_rate: 74,
+                              user_id: User.find_by(email:"eric@lewagon.com").id
+                            )
+
+puts "adding pictures to #{workspace.name}"
+file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQFftgtfvtAY6Q/company-background_10000/0?e=2159024400&v=beta&t=UjQpPk8fkVmVZMOhMDWEplGbaIV3__s-_Tsdwmhvt_k")
+workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+
+
+puts "18 - Hot desks"
+workspace = Workspace.create!(name:"Hot desks",
+                              description:"A fully furnished and equipped workspace located in a prime location within the main Central Business District in Accra. Empower Office Suites is bordered by major hotels like Movenpick, Kempinski as well as Accra City Hotel. We are less than half-hour from the Airport and Accra-Tema motorway.
+                              ",
+                              address:"Boulevard du Souverain 24, 1170 Watermael-Boitsfort, Belgique",
+                              capacity: 63,
+                              daily_rate: 47,
+                              user_id: User.find_by(email:"eric@lewagon.com").id
+                            )
+
+puts "adding pictures to #{workspace.name}"
+file = URI.open("https://images.freeimages.com/images/large-previews/54e/maneken-piss-1253573.jpg")
+workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
 puts "creating Simon"
 User.create!(
