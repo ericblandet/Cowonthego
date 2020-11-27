@@ -22,7 +22,7 @@ User.destroy_all
 puts"db clean now, bro"
 
 puts "creating Eric"
-User.create!(
+eric = User.create!(
   email: "eric@lewagon.com",
   password: "123456",
   username: "eric",
@@ -30,6 +30,9 @@ User.create!(
   last_name: "Blandet",
   role: "owner"
 )
+puts "adding picture to Eric"
+file = URI.open("https://avatars2.githubusercontent.com/u/67010824?s=460&u=37630e834c389cd219c9e00e5ee8978997a79bd4&v=4")
+eric.photo.attach(io: file, filename:"eric.png", content_type: 'image/png')
 
 puts "1 - adding The Office"
 workspace = Workspace.create!(name:"The Office",
@@ -207,7 +210,7 @@ puts "adding pictures to #{workspace.name}"
 file = URI.open("https://miro.medium.com/max/2560/1*wtRpSxtyE0q5Ox44wY5zMQ.jpeg")
 workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
-puts "13 - adding Wojo Lyon"
+puts "14 - adding Wojo Lyon"
 workspace = Workspace.create!(name:"Wojo Lyon",
                               description:"Notre espace évolutif pour entrepreneurs propose au sein de ses espaces, des bureaux privatifs et des postes en coworking
                               Idéalement, situé sur la presqu’ile de Lyon Paris 2, sur les quais entre le pont Lafayette et le pont Wilson. Métro Cordeliers.
@@ -219,10 +222,10 @@ workspace = Workspace.create!(name:"Wojo Lyon",
                             )
 
 puts "adding pictures to #{workspace.name}"
-file = URI.open("https://cdn-images.welcometothejungle.com/dX7VRoI9ZdXua3-pj5dFgxrUPHo7KYiY9Y_vf-p4Enk/rs:auto:1500::/q:85/czM6Ly93dHRqLXByb2R1Y3Rpb24vdXBsb2Fkcy9hcnRpY2xlL2ltYWdlLzQ0NzcvMTUwNTc0L2xlcy1tZWlsbGV1cnMtZXNwYWNlcy1kZS1jb3dvcmtpbmctYS1seW9uLmpwZw")
+file = URI.open("https://pictshare.wojo.com/7bfe02.jpg")
 workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
-puts "14 - Empower Office Suites"
+puts "15 - Empower Office Suites"
 workspace = Workspace.create!(name:"Empower Office Suites",
                               description:"A fully furnished and equipped workspace located in a prime location within the main Central Business District in Accra. Empower Office Suites is bordered by major hotels like Movenpick, Kempinski as well as Accra City Hotel. We are less than half-hour from the Airport and Accra-Tema motorway.
                               ",
@@ -236,7 +239,7 @@ puts "adding pictures to #{workspace.name}"
 file = URI.open("https://cdn-images.welcometothejungle.com/dX7VRoI9ZdXua3-pj5dFgxrUPHo7KYiY9Y_vf-p4Enk/rs:auto:1500::/q:85/czM6Ly93dHRqLXByb2R1Y3Rpb24vdXBsb2Fkcy9hcnRpY2xlL2ltYWdlLzQ0NzcvMTUwNTc0L2xlcy1tZWlsbGV1cnMtZXNwYWNlcy1kZS1jb3dvcmtpbmctYS1seW9uLmpwZw")
 workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
-puts "15 - The Hub Chiang Mai"
+puts "16 - The Hub Chiang Mai"
 workspace = Workspace.create!(name:"The Hub Chiang Mai",
                               description:"The Hub Chiang Mai is a coworking space dedicated to sustainability, experiential learning, and community. The difference between The Hub Chiang Mai and most other coworking spaces, however, is that The Hub really does live by its values.",
                               address:"Chiang Mai, Thailand",
@@ -250,7 +253,7 @@ file = URI.open("https://www.coworker.com/mag/wp-content/uploads/2018/08/3194438
 workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
 
-puts "16 - The commons"
+puts "17 - The commons"
 workspace = Workspace.create!(name:"The commons",
                               description:"Our mission is to provide an environment that allows businesses to connect and grow, and we achieve this through continuous research and mindful consideration of every aspect within our spaces.",
                               address:"3 Albert Coates Ln, Melbourne VIC 3000, Australia",
@@ -265,7 +268,7 @@ workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type:
 
 
 
-puts "17 - The Thinking Hut"
+puts "18 - The Thinking Hut"
 workspace = Workspace.create!(name:"The Thinking Hut",
                               description:"Make a home for your business with a Regus private office. Our fully equipped workspaces have everything taken care of – from the furniture to the high-speed WiFi – so you can focus on driving your business forward.",
                               address:"Amsterdam, Netherlands",
@@ -279,7 +282,7 @@ file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQFftgtfvtAY6Q/comp
 workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
 
-puts "18 - Hot desks"
+puts "19 - Hot desks"
 workspace = Workspace.create!(name:"Hot desks",
                               description:"A fully furnished and equipped workspace located in a prime location within the main Central Business District in Accra. Empower Office Suites is bordered by major hotels like Movenpick, Kempinski as well as Accra City Hotel. We are less than half-hour from the Airport and Accra-Tema motorway.
                               ",
@@ -293,8 +296,26 @@ puts "adding pictures to #{workspace.name}"
 file = URI.open("https://images.freeimages.com/images/large-previews/54e/maneken-piss-1253573.jpg")
 workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
 
+
+puts "20 - Le 10h10"
+workspace = Workspace.create!(name:"Le 10h10",
+                              description:"Au 10h10 Coworking Café, nous avons voulu créer un café
+                              pour travailler, lire, partager, échanger...
+                              Nous croyons que la créativité se développe davantage dans une atmosphère conviviale et esthétique, que dans un cadre standardisé et impersonnel.
+                              Chaque espace est donc conçu pour favoriser la création, les rencontres,
+                              la collaboration, mais aussi la flânerie et la détente.",
+                              address:"210, rue Saint Martin, 75003 Paris, France",
+                              capacity: 25,
+                              daily_rate: 25,
+                              user_id: User.find_by(email:"eric@lewagon.com").id
+                            )
+
+puts "adding pictures to #{workspace.name}"
+file = URI.open("https://www.google.com/maps/uv?pb=!1s0x47e66e1bad0f1f05%3A0x784a20b75ff52ec9!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNGqhqHr7_zQoYyz2NVs_9V5FmKS5_EuyttbqYT%3Dw260-h175-n-k-no!5s10h10%20caf%C3%A9%20-%20Recherche%20Google!15sCgIgAQ&imagekey=!1e10!2sAF1QipNGqhqHr7_zQoYyz2NVs_9V5FmKS5_EuyttbqYT&hl=fr#")
+workspace.photo.attach(io: file, filename:"#{workspace.name}.png", content_type: 'image/png')
+
 puts "creating Simon"
-User.create!(
+simon = User.create!(
               email: "simon@lewagon.com",
               password: "123456",
               username: "simon",
@@ -303,8 +324,12 @@ User.create!(
               role: "user"
 )
 
+puts "adding picture to Simon"
+file = URI.open("https://avatars1.githubusercontent.com/u/59468684?s=460&u=6cb043be59da4fa4c66a626e7e4e6404d821c37f&v=4")
+simon.photo.attach(io: file, filename:"eric.png", content_type: 'image/png')
+
 puts "creating Ben"
-User.create!(
+ben = User.create!(
               email: "ben@lewagon.com",
               password: "123456",
               username: "ben",
@@ -313,8 +338,12 @@ User.create!(
               role: "user"
 )
 
+puts "adding picture to Ben"
+file = URI.open("https://avatars2.githubusercontent.com/u/66464884?s=460&u=e13b5ce4c4512553ce3f474ac9ce9db44a7a0307&v=4")
+ben.photo.attach(io: file, filename:"ben.png", content_type: 'image/png')
+
 puts "creating Tenz"
-User.create!(
+tenz = User.create!(
               email: "tenzin@lewagon.com",
               password: "123456",
               username: "tenz",
@@ -322,6 +351,10 @@ User.create!(
               last_name: "Gasser",
               role: "user"
 )
+
+puts "adding picture to Tenz"
+file = URI.open("https://avatars2.githubusercontent.com/u/72730792?s=460&u=9aeda3ffe37fbf809178c956240333d8d37ca15d&v=4")
+tenz.photo.attach(io: file, filename:"tenz.png", content_type: 'image/png')
 
 puts "creating 5 random users"
 5.times do
