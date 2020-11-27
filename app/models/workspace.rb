@@ -8,4 +8,12 @@ class Workspace < ApplicationRecord
 
   has_many :bookings, dependent: :destroy
   has_one_attached :photo
+
+  include PgSearch::Model
+  pg_search_scope :search_by_address_and_name,
+    against: [ :address, :name ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
 end

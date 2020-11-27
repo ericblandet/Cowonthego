@@ -38,6 +38,8 @@ gem 'faker'
 gem 'cloudinary', '~> 1.16.0'
 # To keep some things secret (api credentials)
 
+gem 'pg_search', '~> 2.3.0'
+
 gem 'geocoder'
 
 group :development, :test do

@@ -1,12 +1,10 @@
 .grid-show {
-  // height:100vh;
   display:grid;
   grid-template-columns: 2fr 1fr;
   overflow:hidden;
   background-color: rgb(247, 247, 247);
   padding-top: 3.7rem;
 }
-
 
 .grid-left {
   display:flex;
