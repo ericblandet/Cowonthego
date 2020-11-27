@@ -8,7 +8,6 @@ class WorkspacesController < ApplicationController
     else
       @workspaces = Workspace.all
     end
-    # @workspaces = Workspace.all
     @markers = @workspaces.geocoded.map do |workspace|
       {
         lat: workspace.latitude,
