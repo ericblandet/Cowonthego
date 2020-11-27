@@ -5,9 +5,11 @@
           <%= f.input :start_date, as: :date, html5: true%>
           <%= f.input :end_date, as: :date, html5: true%>
         <%= f.input :number_of_persons, collection: Booking::NUMBER_OF_PERSONS, id:"number_of_persons" %>
+        <% if  %>
         <div class="d-flex justify-content-center">
-          <%= f.button :submit, "Submit", class: "btn btn-home btn-sm " %>
+          <%= f.button :submit, "Submit", class: "btn btn-home btn-sm" %>
         </div>
+        <% end %>
       <% end %>
     </div>
     <div class="col-lg-3">
@@ -43,5 +45,13 @@
       <i class="fas fa-times"></i>
     </a>
   </div>
-  <% else %>
+<% end %>
+
+<% if @empty == true %>
+  <div class="flash flash-danger alert-center alert-dismissible fade show" role="alert">
+    <span><strong>Oops!</strong> 😱 <br>Please fill all the fields</span>
+    <a data-dismiss="alert" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
 <% end %>
