@@ -17,8 +17,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.build(booking_params)
     @workspace = Workspace.find(params[:workspace_id])
     @booking.workspace = @workspace
-    
-    if @booking.valid?
+    unless @booking.end_date.nil? || @booking.start_date.nil? || @booking.number_of_persons.nil?
       @booking.total_price = (@booking.end_date - @booking.start_date + 1) * @workspace.daily_rate * @booking.number_of_persons
     end
 
