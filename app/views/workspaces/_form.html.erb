@@ -1,3 +1,9 @@
+<div class="heading mg-top-xs">
+  <%= link_to "<<<", workspaces_path, class:"btn btn-back" %>
+  <h2 class=" u-center-text trslt-lft-sm">Edit your workspace</h2>
+</div>
+
+
 <div class="container mg-tp-md">
   <div class="row justify-content-center">
     <div class="col-lg-6">
@@ -9,7 +15,7 @@
         <%= f.input :daily_rate, placeholder: '$14.50', input_html: { min: '1', step: '1' } %>
         <%= f.input :photo, as: :file %>
         <div class=" h-centered">
-        <%= f.button :submit, "Create", class: "btn btn-home u-margin-bottom-md" %>
+        <%= f.button :submit, "Update", class: "btn btn-edit u-margin-bottom-md" %>
         </div>
       <% end %>
     </div>
